@@ -40,7 +40,7 @@ implementation "com.gitub.florent37:multiplatform-log:1.0.0"
 
 ## ios
 
-Uses inside the NSUserDefaults
+Uses inside the Console / print
 
 ```groovy
 implementation "com.gitub.florent37:multiplatform-log-ios:1.0.0"
@@ -48,7 +48,7 @@ implementation "com.gitub.florent37:multiplatform-log-ios:1.0.0"
 
 ## android
 
-Uses inside the SharedPreferences
+Uses inside the Logcat
 
 ```groovy
 implementation "com.gitub.florent37:multiplatform-log-android:1.0.0"
@@ -61,6 +61,16 @@ Just disable the logger on debug :
 ```kotlin
 Logger.enabled = BuildConfig.DEBUG
 ```
+
+# Loggin methods
+
+## Debug
+
+`Log.d(TAG, message)`
+
+## Error
+
+`Log.e(TAG, message, throwable)`
  
 ## License
         

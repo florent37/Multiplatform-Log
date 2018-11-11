@@ -17,6 +17,10 @@ class MainPresenter {
         this.view = null
     }
 
+    fun testLambda(block: (String) -> Unit){
+
+    }
+
     fun displayLogError(){
         Logger.e(tag, "my error message")
     }

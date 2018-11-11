@@ -16,6 +16,10 @@ class ViewController: UIViewController, MainView {
     override func viewDidLoad() {
         presenter.bind(view: self)
         super.viewDidLoad()
+        
+        presenter.testLambda { (test) -> KotlinUnit in
+            return KotlinUnit()
+        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {
