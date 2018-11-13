@@ -1,6 +1,3 @@
-apply plugin: 'com.android.library'
-apply plugin: 'kotlin-platform-android'
-
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -9,6 +6,6 @@ android {
 }
 
 dependencies {
-    expectedBy project(":")
+    expectedBy rootProject
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }

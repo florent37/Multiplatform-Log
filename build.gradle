@@ -45,7 +45,7 @@ allprojects {
     }
 
     def platform = platformOf(project)
-    if(platform.equals("android")){
+    if(platform == "android"){
         apply plugin: 'com.android.library'
         apply plugin: 'kotlin-android'
         apply plugin: 'kotlin-platform-android'
@@ -139,7 +139,7 @@ configure(allprojects) {
     publishing {
         publications {
             mavenProject(MavenPublication) {
-                if (!project.name.contains('ios') && !project.name.endsWith('android')) {
+                if (!project.name.endsWith('ios') && !project.name.endsWith('android')) {
                     from components.java
                 }
 
