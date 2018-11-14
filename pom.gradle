@@ -8,15 +8,15 @@ def pomConfig = {
     }
     developers {
         developer {
-            id "Florent37"
-            name 'Florent Champigny'
-            organization 'Florent37'
-            organizationUrl 'http://github.com/florent37'
+            id developperId
+            name developperName
+            organization developperOrganisation
+            organizationUrl developperOrganisationUrl
         }
     }
 
     scm {
-        url "https://github.com/florent37/Multiplatform-Log"
+        url projectGithubUrl
     }
 }
 
@@ -24,8 +24,8 @@ def withPom = { pom ->
     pom.withXml {
         def root = asNode()
         root.appendNode('name', project.name)
-        root.appendNode('description', 'Multiplatform Log')
-        root.appendNode('url', 'https://github.com/florent37/Multiplatform-Log')
+        root.appendNode('description', projectDescription)
+        root.appendNode('url', projectGithubUrl)
         root.children().last() + pomConfig
     }
 }

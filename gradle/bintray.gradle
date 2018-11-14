@@ -6,9 +6,9 @@ bintray {
     override = true
 
     pkg {
-        userOrg = 'florent37'
-        repo = 'maven' //the name of your repo
-        name = 'multiplatform-log'
+        userOrg = projectBintrayUserOrg
+        repo = projectBintrayRepoName
+        name = projectBintrayArtifactName
         licenses = ['Apache-2.0']
         publications = ['mavenProject']
 

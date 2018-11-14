@@ -12,10 +12,10 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "org.jetbrains.kotlin:kotlin-allopen:$kotlin_version"
         classpath "org.jetbrains.kotlin:kotlin-frontend-plugin:0.0.37"
-        classpath("org.jetbrains.kotlin:kotlin-native-gradle-plugin:$kotlin_native_version") {
+        classpath("org.jetbrains.kotlin:kotlin-native-gradle-plugin:$kotlin_version") {
             exclude group: 'org.jetbrains.kotlin', module: 'kotlin-gradle-plugin'
         }
-        classpath "com.android.tools.build:gradle:$gradle_android_version"
+        classpath "com.android.tools.build:gradle:3.2.1"
         classpath group: 'net.rubygrapefruit', name: 'native-platform', version: '0.10'
         classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:$bintray_plugin_version"
     }
@@ -24,7 +24,6 @@ buildscript {
 plugins {
     id 'net.researchgate.release' version '2.6.0'
 }
-
 
 static def platformOf(project) {
     if (project.name.endsWith("-common")) return "common"
@@ -66,6 +65,8 @@ allprojects {
     def useExperimentalOptionString = "-Xuse-experimental=${useExperimentalAnnotations.join(",")}"
 
     if (platform == 'native') {
+        archivesBaseName = libraryName+"-ios"
+
         sourceSets {
             main {
                 component {
@@ -82,6 +83,8 @@ allprojects {
             }
         }
     } else if (platform == 'common') {
+        archivesBaseName = libraryName
+
         compileKotlinCommon {
             kotlinOptions.freeCompilerArgs += [useExperimentalOptionString]
         }
@@ -89,6 +92,8 @@ allprojects {
             kotlinOptions.freeCompilerArgs += [useExperimentalOptionString]
         }
     } else if (platform == 'android') {
+        archivesBaseName = libraryName+"-android"
+
         /*
         compileKotlin {
             kotlinOptions.freeCompilerArgs += [useExperimentalOptionString]
