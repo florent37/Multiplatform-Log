@@ -46,7 +46,7 @@ kotlin {
         commonMain {
             dependencies {
                 implementation 'org.jetbrains.kotlin:kotlin-stdlib-common'
-                implementation "com.github.florent37:multiplatform-log:1.0.0"
+                implementation "com.github.florent37:multiplatform-log:1.0.1"
             }
         }
         commonTest {
@@ -58,7 +58,7 @@ kotlin {
         androidMain {
             dependencies {
                 implementation 'org.jetbrains.kotlin:kotlin-stdlib'
-                implementation "com.github.florent37:multiplatform-log-android:1.0.0"
+                implementation "com.github.florent37:multiplatform-log-android:1.0.1"
             }
         }
         androidTest {
@@ -69,7 +69,7 @@ kotlin {
         }
         iosMain {
             dependencies {
-                implementation "com.github.florent37:multiplatform-log-ios:1.0.0"
+                implementation "com.github.florent37:multiplatform-log-ios:1.0.1"
             }
         }
         iosTest {

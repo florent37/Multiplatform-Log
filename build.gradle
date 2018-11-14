@@ -153,7 +153,7 @@ configure(allprojects) {
                 version project.version
 
                 if (project.name.endsWith('android')) {
-                    artifact("$buildDir/outputs/aar/${project.name}-debug.aar")
+                    artifact("$buildDir/outputs/aar/${libraryName}-android-debug.aar")
                 }
                 artifact sourceJar
 
