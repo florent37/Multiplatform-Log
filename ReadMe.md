@@ -60,7 +60,7 @@ implementation "com.gitub.florent37:multiplatform-log-android:1.0.0"
 
 # Disable logs on release
 
-Eisable the logger just on debug :
+Enable the logger just on debug :
 
 ```kotlin
 Logger.enabled = BuildConfig.DEBUG
