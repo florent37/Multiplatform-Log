@@ -37,7 +37,7 @@ repositories {
 
  [ ![Download](https://api.bintray.com/packages/florent37/maven/multiplatform-log/images/download.svg) ](https://bintray.com/florent37/maven/multiplatform-log/_latestVersion)
 ```groovy
-implementation "com.gitub.florent37:multiplatform-log:1.0.0"
+implementation "com.github.florent37:multiplatform-log:1.0.0"
 ```
 
 ## ios
@@ -46,7 +46,7 @@ Uses inside the Console / print
 
  [ ![Download](https://api.bintray.com/packages/florent37/maven/multiplatform-log/images/download.svg) ](https://bintray.com/florent37/maven/multiplatform-log/_latestVersion)
 ```groovy
-implementation "com.gitub.florent37:multiplatform-log-ios:1.0.0"
+implementation "com.github.florent37:multiplatform-log-ios:1.0.0"
 ```
 
 ## android
@@ -55,7 +55,7 @@ Uses inside the Logcat
 
  [ ![Download](https://api.bintray.com/packages/florent37/maven/multiplatform-log/images/download.svg) ](https://bintray.com/florent37/maven/multiplatform-log/_latestVersion)
 ```groovy
-implementation "com.gitub.florent37:multiplatform-log-android:1.0.0"
+implementation "com.github.florent37:multiplatform-log-android:1.0.0"
 ```
 
 # Disable logs on release
