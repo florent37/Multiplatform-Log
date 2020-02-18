@@ -7,7 +7,7 @@ pluginManagement {
         }
     }
 }
-rootProject.name = 'sample-preferences'
+rootProject.name = 'sample-log'
 enableFeaturePreview('GRADLE_METADATA')
 
 include ':app'

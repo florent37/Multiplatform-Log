@@ -6,9 +6,9 @@ bintray {
     override = true
 
     pkg {
-        userOrg = projectBintrayUserOrg
-        repo = projectBintrayRepoName
-        name = projectBintrayArtifactName
+        userOrg = 'florent37'
+        repo = 'maven'
+        name = project.bintray_name
         licenses = ['Apache-2.0']
         publications = ['mavenProject']
 

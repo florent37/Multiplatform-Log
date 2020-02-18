@@ -26,7 +26,7 @@ class MainPresenter {
     }
 
     fun displayLogDebug(){
-        Logger.e(tag, "my debug message")
+        Logger.d(tag, "my debug message")
     }
 
 }
